@@ -3,14 +3,14 @@ from pathlib import Path
 def get_config():
     return {
         "batch_size": 32,
-        "num_epochs": 10,
+        "num_epochs": 20, # Increased epochs for better convergence
         "lr": 10**-4,
-        "seq_len": 150, # Reduced seq_len for speed
-        "d_model": 128, # Tiny model for CPU
-        "d_ff": 512,
-        "n_layers": 2,
-        "n_heads": 4,
-        "dataset_limit": 20000, # Increased to 12000
+        "seq_len": 350, # Standard sequence length
+        "d_model": 512, # Standard Transformer size
+        "d_ff": 2048,   # Standard feedforward size
+        "n_layers": 6,  # Standard depth
+        "n_heads": 8,   # Standard heads
+        "dataset_limit": None, # Use full dataset (or set to ~30000 if too slow)
         "datasource": 'Helsinki-NLP/opus_books',
         "lang_src": "en",
         "lang_tgt": "it",
