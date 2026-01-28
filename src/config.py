@@ -16,7 +16,7 @@ def get_config():
         "lang_tgt": "it",
         "model_folder": "checkpoints", # Cleaned up name
         "model_basename": "tmodel_",
-        "preload": None, # Start from scratch
+        "preload": "latest", # Resume from latest
         "tokenizer_file": "tokenizers/tokenizer_{0}.json", # Updated path
         "experiment_name": "runs/tmodel"
     }
