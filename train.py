@@ -143,7 +143,8 @@ def get_ds(config):
     ds_raw = load_dataset(f"{config['datasource']}", f"{config['lang_src']}-{config['lang_tgt']}", split='train')
     
     # Limit dataset size for speed if configured
-    if 'dataset_limit' in config:
+    # Limit dataset size for speed if configured
+    if config.get('dataset_limit'):  # Checks if it's not None and not 0
         limit = min(len(ds_raw), config['dataset_limit'])
         ds_raw = ds_raw.select(range(limit))
         print(f"Limiting dataset to {limit} examples for speed.")
