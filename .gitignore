@@ -1,2 +1,20 @@
+
+# Python
 venv/
 __pycache__/
+*.py[cod]
+*$py.class
+
+# Training artifacts
+runs/
+checkpoints/
+weights/
+opus_books_weights/
+*.pt
+*.bin
+*.ckpt
+
+# Local config/data
+.env
+.vscode/
+*.log
