@@ -1,0 +1,12 @@
+## Use python 3.9
+
+# torch==2.0.1
+torchvision
+torchaudio
+torchtext
+datasets
+tokenizers
+torchmetrics
+tensorboard
+altair
+wandb
