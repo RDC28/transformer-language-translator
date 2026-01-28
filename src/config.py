@@ -2,7 +2,7 @@ from pathlib import Path
 
 def get_config():
     return {
-        "batch_size": 32,
+        "batch_size": 8, # Reduced to fit in GPU memory
         "num_epochs": 20, # Increased epochs for better convergence
         "lr": 10**-4,
         "seq_len": 350, # Standard sequence length
